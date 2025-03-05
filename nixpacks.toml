@@ -1,2 +1,2 @@
 ﻿[start]
-cmd = "waitress-serve --listen=*:5000 app:app"
+cmd = "python3 server.py"
