@@ -21,7 +21,7 @@ def weather():
         return render_template('city_not_found.html')
     return render_template('weather.html', city = city, result_state = result)
 if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=8000)
+    serve(app, host='0.0.0.0', port=80)
 
 
 
