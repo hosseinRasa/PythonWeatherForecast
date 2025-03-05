@@ -1,2 +1,2 @@
 ﻿[start]
-cmd = "waitress-serve --listen=*:5000 server:app"
+cmd = "gunicorn server:app"

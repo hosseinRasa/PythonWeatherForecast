@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 from weather import Weather
-from waitress import serve
+# from waitress import serve
 
 app = Flask(__name__)
 
@@ -20,8 +20,8 @@ def weather():
     if result['cod'] != 200:
         return render_template('city_not_found.html')
     return render_template('weather.html', city = city, result_state = result)
-if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=80)
+# if __name__ == '__main__':
+#     serve(app, host='0.0.0.0', port=80)
 
 
 
