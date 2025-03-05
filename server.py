@@ -1,5 +1,7 @@
 from flask import Flask, request, render_template
 from weather import Weather
+from waitress import serve
+
 app = Flask(__name__)
 
 @app.route('/index')
@@ -19,7 +21,7 @@ def weather():
         return render_template('city_not_found.html')
     return render_template('weather.html', city = city, result_state = result)
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    serve(app, host='0.0.0.0', port=8000)
 
 
 
