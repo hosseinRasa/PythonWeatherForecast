@@ -23,7 +23,9 @@ def weather():
 # if __name__ == '__main__':
 #     serve(app, host='0.0.0.0', port=80)
 
+
+# This adapts Flask for Cloudflare
 def handler(event, context):
-    return app(request.environ, context)
+    return app(event["request"], context)
 
 
